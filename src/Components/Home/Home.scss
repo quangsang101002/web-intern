@@ -1,0 +1,39 @@
+.slide-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+  transition: all 0s ease 0s;
+  left: 0;
+  // margin-top: 60px;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  left: 100%;
+  // transform: scale(1.08);
+}
+.left-arrow {
+  position: absolute;
+  font-size: 50px;
+  color: #ddd;
+  z-index: 1000;
+  cursor: pointer;
+}
+.right-arrow {
+  position: absolute;
+  right: 0;
+  color: #ddd;
+  font-size: 50px;
+  display: block;
+  z-index: 1000;
+  cursor: pointer;
+}

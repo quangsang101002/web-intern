@@ -1,0 +1,30 @@
+.cartitem-wrapper {
+  margin-top: 170px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.cartitem-img {
+  width: 200px;
+}
+.cartitem-title {
+  font-size: 20px;
+}
+.cartitem-heading {
+}
+.cartitem-icon {
+  font-size: 40px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.product_emtyCart-product {
+  margin-top: 142px;
+  margin-bottom: 111px;
+}
+
+h2.product_emtyCart {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

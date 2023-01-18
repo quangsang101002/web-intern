@@ -1,0 +1,226 @@
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  position: relative;
+  padding: 0 40px;
+  height: 80px;
+  background-color: #fff;
+
+  li {
+    cursor: pointer;
+  }
+}
+.navbar-app {
+  position: relative;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+.navbar-logo {
+  cursor: pointer;
+}
+.navbar-logo {
+}
+.navbar-list {
+}
+.navbar-list_body {
+  display: flex;
+  list-style: none;
+
+  li {
+    padding: 10px 20px;
+  }
+}
+
+.navbar-list_newproduct::before {
+  content: "hot";
+  position: absolute;
+  height: 17px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: #b31f2a;
+
+  bottom: 21px;
+  padding: 0 5px;
+  font-size: 11px;
+  text-transform: none;
+  color: #fff;
+
+  position: relative;
+  left: 87px;
+}
+.navbar-list-promotion::after {
+  content: "hot";
+  position: absolute;
+  height: 17px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: #b31f2a;
+
+  bottom: 21px;
+  padding: 0 5px;
+  font-size: 11px;
+  text-transform: none;
+  color: #fff;
+
+  position: relative;
+  right: 20px;
+}
+.navbar-badge {
+}
+.navbar-list_footwear,
+.navbar-list_accessory,
+.navbar-list_malepants,
+.navbar-list_mensshirt {
+  position: relative;
+}
+.navbar-list_mensshirt:hover .navbar-list_mensshirt-children {
+  display: block;
+}
+.navbar-list_malepants:hover .navbar-list_malepants-children {
+  display: block;
+}
+.navbar-list_accessory:hover .navbar-list_accessory-children {
+  display: block;
+}
+.navbar-list_footwear:hover .navbar-list_footwear-children {
+  display: block;
+}
+
+.navbar-list_malepants-children {
+  position: absolute;
+
+  list-style: none;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  top: 44px;
+  left: 0px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  li {
+    // transition: transform linear 0.4s;
+    padding: 10px 0px;
+    border-bottom: 1px solid #efe7e7;
+    width: 208px;
+    background-color: #fff;
+
+    padding-left: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+.navbar-list_accessory-children {
+  position: absolute;
+
+  list-style: none;
+  z-index: 1000;
+  top: 44px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  &:hover {
+    color: #b31f2a;
+  }
+  li {
+    // transition: transform linear 0.4s;
+    padding: 10px 0px;
+    border-bottom: 1px solid #efe7e7;
+    width: 208px;
+    background-color: #fff;
+
+    padding-left: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+.navbar-list_footwear-children {
+  position: absolute;
+
+  list-style: none;
+  z-index: 1000;
+  top: 44px;
+  /* right: -59px; */
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  display: none;
+
+  li {
+    // transition: transform linear 0.4s;
+    padding: 10px 0px;
+    border-bottom: 1px solid #efe7e7;
+    width: 208px;
+    background-color: #fff;
+
+    padding-left: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+.navbar-list_mensshirt-children {
+  position: absolute;
+
+  z-index: 1000;
+  list-style: none;
+  top: 44px;
+  left: 0px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  li {
+    // transition: transform linear 0.4s;
+    padding: 10px 0px;
+    border-bottom: 1px solid #efe7e7;
+    width: 208px;
+    background-color: #fff;
+
+    padding-left: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+
+.navbar-icon {
+  display: flex;
+  gap: 20px;
+}
+.navbar-search,
+.navbar-cart {
+  width: 54px;
+  height: 32px;
+  background-color: #efe7e7;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* border: 4px; */
+  border-radius: 4px;
+  color: #9d2020;
+}
+.navbar-cart:hover,
+.navbar-search:hover {
+  border: 1px solid currentColor;
+  cursor: pointer;
+}
+.navbar-list_newproduct,
+.navbar-list_malepants li,
+.navbar-list_mensshirt li,
+.navbar-list_accessory li,
+.navbar-list_footwear li,
+.navbar-list-promotion {
+  &:hover {
+    color: #b31f2a;
+  }
+}
+.cart-lenght {
+  display: flex;
+  color: #b31f2a;
+}
