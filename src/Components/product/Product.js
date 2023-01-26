@@ -50,7 +50,7 @@ const Product = () => {
       <>
         <div className="product">
           <div className="product__preview">
-            <Skeleton height={350} width={400} />
+            <Skeleton height={200} width={200} />
           </div>
           <div className="product__overview">
             <h3 className="product__category">
@@ -58,7 +58,7 @@ const Product = () => {
             </h3>
 
             <p className="product__name">
-              <Skeleton count={1} width={400} />
+              <Skeleton count={1} width={300} />
             </p>
 
             <p className="product__rating">
@@ -69,7 +69,7 @@ const Product = () => {
             </h2>
 
             <p className="product__desc">
-              <Skeleton count={5} width={400} />
+              <Skeleton count={5} width={300} />
             </p>
 
             <div>

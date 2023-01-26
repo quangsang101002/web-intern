@@ -224,3 +224,8 @@
   display: flex;
   color: #b31f2a;
 }
+@media screen and (max-width: 768px) {
+  .navbar-list {
+    display: none;
+  }
+}

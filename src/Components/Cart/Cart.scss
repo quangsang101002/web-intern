@@ -28,3 +28,15 @@ h2.product_emtyCart {
   justify-content: center;
   display: flex;
 }
+
+@media screen and (max-width: 768px) {
+  .cartitem-img {
+    width: 57px;
+  }
+  .cartitem-title {
+    font-size: 14px;
+    width: 102px;
+  }
+  .product-body {
+  }
+}
