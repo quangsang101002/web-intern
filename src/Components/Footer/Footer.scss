@@ -1,12 +1,10 @@
 .wrapper-footer {
-  display: flex;
   margin-top: 45px;
   border-top: 2px solid #b13e3e;
-  padding-top: 65px;
   background-color: #1e1e1e;
   color: #bbb;
   padding-bottom: 30px;
-  justify-content: space-around;
+  padding-top: 20px;
 }
 .footer-promo {
 }
@@ -14,6 +12,7 @@
   background-color: #1e1e1e;
   display: flex;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 .footer-logo {
   font-size: 14px;
@@ -66,4 +65,8 @@
   font-size: 12px;
   background-color: #1e1e1e;
   color: #bbb;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
 }

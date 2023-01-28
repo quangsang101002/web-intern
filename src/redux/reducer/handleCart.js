@@ -2,6 +2,7 @@ const cart = [];
 
 const HandleCart = (state = cart, action) => {
   const product = action.payload;
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>", product);
   console.log("state", state);
   switch (action.type) {
     case "ADDCART":
@@ -34,6 +35,10 @@ const HandleCart = (state = cart, action) => {
           x.id === product.id ? { ...x, qty: x.qty - 1 } : x
         );
       }
+    case "NAVMENU":
+      return {
+        product,
+      };
     default:
       return state;
   }

@@ -1,17 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { IoCartSharp } from "react-icons/io5";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./Products.scss";
 
 export const Products = () => {
+  const state = useSelector((state) => state.handleCart);
   const [data, setData] = useState([]);
   const [fiter, setFilter] = useState([]);
   const [active, setActive] = useState(1);
-
   const [loading, setLoading] = useState(false);
+
   let componentMounted = true;
 
   useEffect(() => {
@@ -91,6 +94,7 @@ export const Products = () => {
         setFilter(updateList);
       }
     };
+    const navMenu = () => {};
     return (
       <>
         <div className="gird-wrapper">
@@ -112,7 +116,10 @@ export const Products = () => {
             ))}
           </div>
           <div className="product-input">
-            <input onChange={(e) => setSearch(e.target.value.toLowerCase())} />
+            <input
+              onChange={(e) => setSearch(e.target.value.toLowerCase())}
+              placeholder="searchs"
+            />
             <AiOutlineSearch
               className="product-search"
               onClick={() => searchOut(search)}
@@ -130,16 +137,34 @@ export const Products = () => {
                   return (
                     <div className="gird-collum" key={products.id}>
                       <div className="wrapper-collum">
-                        <div className="gird-collum-body">
-                          <img src={products.image} alt={products.title} />
+                        <div
+                          className={
+                            products.category ? "collum-product_new" : ""
+                          }
+                        >
+                          new
                         </div>
+                        <div className="gird-collum-body">
+                          <Link to={`/product/${products.id}`}>
+                            <img
+                              className="product-img"
+                              src={products.image}
+                              alt={products.title}
+                            />
+                          </Link>
+                        </div>
+                        <div className="overlay">
+                          <Link
+                            className="overlay-body"
+                            to={`/product/${products.id}`}
+                          >
+                            <IoCartSharp />
+                          </Link>
+                        </div>
+
                         <div className="gird-card">
                           <h2>{products.title}</h2>
-                          <p>{products.price}</p>
-
-                          <Link to={`/product/${products.id}`}>
-                            <button>Buy now</button>
-                          </Link>
+                          <p>${products.price}</p>
                         </div>
                       </div>
                     </div>

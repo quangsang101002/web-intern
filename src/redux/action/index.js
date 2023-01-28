@@ -11,3 +11,9 @@ export const delCart = (product) => {
     payload: product,
   };
 };
+export const navMenu = (product) => {
+  return {
+    type: "NAVMENU",
+    payload: product,
+  };
+};
