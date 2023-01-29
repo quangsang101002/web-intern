@@ -2,7 +2,6 @@ const cart = [];
 
 const HandleCart = (state = cart, action) => {
   const product = action.payload;
-  console.log(">>>>>>>>>>>>>>>>>>>>>>>>", product);
   console.log("state", state);
   switch (action.type) {
     case "ADDCART":

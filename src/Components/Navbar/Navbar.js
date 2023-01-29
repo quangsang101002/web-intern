@@ -15,10 +15,10 @@ const Navbar = () => {
   const handleClick = () => setClick(!click);
   const closeMenuMobile = () => setClick(!click);
 
-  const dispatch = useDispatch();
-  const filterProduct = (input) => {
-    dispatch(navMenu(input));
-  };
+  // const dispatch = useDispatch();
+  // const filterProduct = (input) => {
+  //   dispatch(navMenu(input));
+  // };
   return (
     <>
       <div className="navbar-app">
@@ -34,20 +34,20 @@ const Navbar = () => {
 
           <div className={click ? "nav-menu active" : "nav-menu "}>
             <ul className="list-product">
-              <div
-                className="list-product_active"
-                onClick={() => {
-                  closeMenuMobile();
-                  filterProduct("men's clothing");
-                }}
-              >
-                Men's Clothing
-              </div>
               <li
                 className="list-product_active"
                 onClick={() => {
                   closeMenuMobile();
-                  filterProduct("jewelery");
+                  // filterProduct("men's clothing");
+                }}
+              >
+                Men's Clothing
+              </li>
+              <li
+                className="list-product_active"
+                onClick={() => {
+                  closeMenuMobile();
+                  // filterProduct("women's clothing");
                 }}
               >
                 Women's Clothing
@@ -57,7 +57,7 @@ const Navbar = () => {
                 onClick={() => {
                   closeMenuMobile();
 
-                  filterProduct("jewelery");
+                  // filterProduct("jewelery");
                 }}
               >
                 Jewelery
@@ -67,7 +67,7 @@ const Navbar = () => {
                 onClick={() => {
                   closeMenuMobile();
 
-                  filterProduct("electronics");
+                  // filterProduct("electronics");
                 }}
               >
                 Electronics

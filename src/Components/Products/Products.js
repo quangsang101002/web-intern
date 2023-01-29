@@ -9,14 +9,14 @@ import { useSelector } from "react-redux";
 import "./Products.scss";
 
 export const Products = () => {
-  const state = useSelector((state) => state.handleCart);
+  const state = useSelector((states) => states.handleCart);
   const [data, setData] = useState([]);
+
+  console.log(">>>>>>>>>>>data", data);
   const [fiter, setFilter] = useState([]);
   const [active, setActive] = useState(1);
   const [loading, setLoading] = useState(false);
-
   let componentMounted = true;
-
   useEffect(() => {
     const getProduct = async () => {
       setLoading(true);
@@ -94,7 +94,7 @@ export const Products = () => {
         setFilter(updateList);
       }
     };
-    const navMenu = () => {};
+
     return (
       <>
         <div className="gird-wrapper">
@@ -177,12 +177,20 @@ export const Products = () => {
       </>
     );
   };
+
+  const filterProduct = (cat) => {
+    console.log("cat", cat);
+    const updateList = data.filter((x) => x.category === cat.product);
+    setFilter(updateList);
+  };
+
   return (
     <>
       <div className="products-title">
         <h1>selling products</h1>
       </div>
       {loading ? <Loading /> : <ListProduct />}
+      {state.map(filterProduct)}
     </>
   );
 };
