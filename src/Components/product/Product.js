@@ -4,9 +4,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import { useDispatch } from "react-redux";
-
 import { addCart } from "~/redux/action";
 import "./product.scss";
 
@@ -16,7 +14,6 @@ const Product = () => {
   const dispatch = useDispatch();
   console.log("data", data);
   const { id } = useParams();
-  const disMount = true;
 
   const addProduct = (product) => {
     dispatch(addCart(product));
@@ -36,13 +33,11 @@ const Product = () => {
     const getProduct = async () => {
       setLoading(true);
       const rep = await fetch(`https://fakestoreapi.com/products/${id}`);
-      if (disMount) {
-        setData(await rep.clone().json());
-        setLoading(false);
-      } else {
-        return;
-      }
+      setData(await rep.json());
+      setLoading(false);
+      return;
     };
+
     getProduct();
   }, []);
   const Loading = () => {

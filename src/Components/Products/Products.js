@@ -11,8 +11,6 @@ import "./Products.scss";
 export const Products = () => {
   const state = useSelector((states) => states.handleCart);
   const [data, setData] = useState([]);
-
-  console.log(">>>>>>>>>>>data", data);
   const [fiter, setFilter] = useState([]);
   const [active, setActive] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -25,9 +23,10 @@ export const Products = () => {
         setData(await respon.clone().json());
         setFilter(await respon.json());
         setLoading(false);
-      } else {
-        return;
       }
+      return () => {
+        componentMounted = false;
+      };
     };
     getProduct();
   }, []);

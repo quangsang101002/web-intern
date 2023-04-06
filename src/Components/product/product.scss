@@ -47,7 +47,18 @@
     cursor: pointer;
   }
 }
-@media screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1200px) {
+  .banner-album {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .banner-album {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
   .grid-row {
     display: flex;
     flex-direction: column;
@@ -112,5 +123,11 @@
   .product {
     display: block;
     margin-left: 25px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .banner-album {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

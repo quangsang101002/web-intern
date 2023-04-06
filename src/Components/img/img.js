@@ -7,6 +7,6 @@ export const SlideBanner = [
     image: "./image/banner-top.jpg",
   },
   {
-    image: "./image/banner-2.jpg",
+    image1: "./image/banner-2.jpg",
   },
 ];
