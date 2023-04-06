@@ -96,83 +96,85 @@ export const Products = () => {
 
     return (
       <>
-        <div className="gird-wrapper">
-          <div className="product-button">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                className={
-                  active === category.id ? "button-active" : "products__tag"
-                }
-                id={category.id}
-                onClick={(e) => {
-                  setActive(Number(e.target.id));
-                  filterProduct(category.name.toLowerCase());
-                }}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-          <div className="product-input">
-            <input
-              onChange={(e) => setSearch(e.target.value.toLowerCase())}
-              placeholder="searchs"
-            />
-            <AiOutlineSearch
-              className="product-search"
-              onClick={() => searchOut(search)}
-            />
-          </div>
-          <div className="gird-row">
-            {fiter.length === 0 ? (
-              <h3 className="mt-4 mg-b4">
-                {" "}
-                Sorry! We don't have the product that you were looking for ^-^
-              </h3>
-            ) : (
-              <>
-                {fiter.map((products) => {
-                  return (
-                    <div className="gird-collum" key={products.id}>
-                      <div className="wrapper-collum">
-                        <div
-                          className={
-                            products.category ? "collum-product_new" : ""
-                          }
-                        >
-                          new
-                        </div>
-                        <div className="gird-collum-body">
-                          <Link to={`/product/${products.id}`}>
-                            <img
-                              className="product-img"
-                              src={products.image}
-                              alt={products.title}
-                            />
-                          </Link>
-                        </div>
-                        <div className="overlay">
-                          <Link
-                            className="overlay-body"
-                            to={`/product/${products.id}`}
-                          >
-                            <IoCartSharp />
-                          </Link>
-                        </div>
+        <section>
+          <div className="gird-wrapper">
+            <div className="product-button">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  className={
+                    active === category.id ? "button-active" : "products__tag"
+                  }
+                  id={category.id}
+                  onClick={(e) => {
+                    setActive(Number(e.target.id));
+                    filterProduct(category.name.toLowerCase());
+                  }}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
+            <div className="product-input">
+              <input
+                onChange={(e) => setSearch(e.target.value.toLowerCase())}
+                placeholder="searchs"
+              />
+              <AiOutlineSearch
+                className="product-search"
+                onClick={() => searchOut(search)}
+              />
+            </div>
+            <div className="gird-row">
+              {fiter.length === 0 ? (
+                <h3 className="mt-4 mg-b4">
+                  {" "}
+                  Sorry! We don't have the product that you were looking for ^-^
+                </h3>
+              ) : (
+                <>
+                  {fiter.map((products) => {
+                    return (
+                      <section>
+                        <div className="gird-collum" key={products.id}>
+                          <div className="wrapper-collum">
+                            <div
+                              className={
+                                products.category ? "collum-product_new" : ""
+                              }
+                            ></div>
+                            <div className="gird-collum-body">
+                              <Link to={`/product/${products.id}`}>
+                                <img
+                                  className="product-img"
+                                  src={products.image}
+                                  alt={products.title}
+                                />
+                              </Link>
+                            </div>
+                            <div className="overlay">
+                              <Link
+                                className="overlay-body"
+                                to={`/product/${products.id}`}
+                              >
+                                <IoCartSharp />
+                              </Link>
+                            </div>
 
-                        <div className="gird-card">
-                          <h2>{products.title}</h2>
-                          <p>${products.price}</p>
+                            <div className="gird-card">
+                              <h2>{products.title}</h2>
+                              <p>${products.price}</p>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </>
-            )}
+                      </section>
+                    );
+                  })}
+                </>
+              )}
+            </div>
           </div>
-        </div>
+        </section>
       </>
     );
   };
