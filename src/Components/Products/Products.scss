@@ -9,7 +9,8 @@
 // }
 
 .gird-collum-body {
-  height: 275px;
+  height: 250px;
+  padding: 24px;
 }
 
 img.product-img {
@@ -31,8 +32,8 @@ img.product-img {
 }
 .wrapper-collum {
   box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
-  margin-right: 12px;
-  margin-left: 12px;
+  // margin-right: 12px;
+  // margin-left: 12px;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
@@ -63,6 +64,7 @@ img.product-img {
   background-color: #f5f5f5;
   padding: 17px 0;
   line-height: 14px;
+  display: grid;
 
   h2 {
     white-space: nowrap;
@@ -81,6 +83,7 @@ img.product-img {
   p {
     font-size: 16px;
     color: #c80204;
+    place-self: center;
   }
   button {
     padding: 11px 16px;

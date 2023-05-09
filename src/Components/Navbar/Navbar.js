@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const state = useSelector((state) => state.handleCart);
+
+  console.log(">>>>>>>>>>>> length", state);
   const handleClick = () => setClick(!click);
   const closeMenuMobile = () => setClick(!click);
 
@@ -24,6 +26,7 @@ const Navbar = () => {
       <div className="navbar-app">
         <div className="navbar-wrapper">
           <div className="navbar-logo">
+            {}
             <Link to="/">
               <img src={img.imglogo} alt="logo4menshop" />
             </Link>

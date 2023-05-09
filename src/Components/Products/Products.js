@@ -179,19 +179,12 @@ export const Products = () => {
     );
   };
 
-  const filterProduct = (cat) => {
-    console.log("cat", cat);
-    const updateList = data.filter((x) => x.category === cat.product);
-    setFilter(updateList);
-  };
-
   return (
     <>
       <div className="products-title">
         <h1>selling products</h1>
       </div>
       {loading ? <Loading /> : <ListProduct />}
-      {state.map(filterProduct)}
     </>
   );
 };

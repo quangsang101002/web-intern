@@ -9,6 +9,8 @@ import "./Cart.scss";
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
 
+  console.log();
+
   const dispatch = useDispatch();
 
   const cartItems = (cartItem) => {

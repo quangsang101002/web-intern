@@ -13,9 +13,9 @@ export default class Home extends Component {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
-      pauseOnHover: false,
+      pauseOnHover: true,
     };
 
     return (
